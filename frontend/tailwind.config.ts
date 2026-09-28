@@ -1,0 +1,132 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: { DEFAULT: "1rem", sm: "1.5rem", lg: "2rem", xl: "2.5rem" },
+      screens: { "2xl": "1440px" },
+    },
+    extend: {
+      colors: {
+        ivory: "#F7F4EC",
+        paper: "#FFFCF6",
+        ink: "#102A2A",
+        navy: {
+          DEFAULT: "#102D3A",
+          50: "#F4F7F6",
+          100: "#E8EEEC",
+          200: "#D2DDD9",
+          300: "#A8BBB6",
+          400: "#708B87",
+          500: "#4B6A68",
+          600: "#34524F",
+          700: "#23413E",
+          800: "#18332F",
+          900: "#102D3A",
+          950: "#091D22",
+        },
+        forest: "#123D36",
+        teal: {
+          DEFAULT: "#0B7A75",
+          50: "#EFF9F7",
+          100: "#D9EEEA",
+          200: "#B5DDD7",
+          300: "#82C5BD",
+          400: "#49A69D",
+          500: "#218B84",
+          600: "#0B7A75",
+          700: "#09635F",
+          800: "#084E4B",
+          900: "#073F3D",
+        },
+        "teal-soft": "#D9EEEA",
+        saffron: {
+          DEFAULT: "#E99024",
+          50: "#FFF8EB",
+          100: "#FCE8C4",
+          200: "#F8D08A",
+          300: "#F2B755",
+          400: "#E99024",
+          500: "#D9821B",
+          600: "#B96812",
+          700: "#96500F",
+          800: "#783E13",
+          900: "#633414",
+        },
+        "saffron-soft": "#FCE8C4",
+        coral: "#D85C4A",
+        mist: "#E6ECE8",
+        primary: {
+          50: "#EFF9F7",
+          100: "#D9EEEA",
+          200: "#B5DDD7",
+          300: "#82C5BD",
+          400: "#49A69D",
+          500: "#218B84",
+          600: "#0B7A75",
+          700: "#09635F",
+        },
+        success: {
+          50: "#ECFDF5",
+          100: "#D1FAE5",
+          200: "#A7F3D0",
+          500: "#10B981",
+          600: "#059669",
+          700: "#047857",
+        },
+        warning: {
+          50: "#FFF8EB",
+          100: "#FCE8C4",
+          200: "#F8D08A",
+          500: "#E99024",
+          600: "#B96812",
+          700: "#96500F",
+        },
+        "soft-slate": "#F7F4EC",
+      },
+      fontFamily: {
+        sans: ["Inter", "Avenir Next", "Segoe UI", "sans-serif"],
+        display: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", "serif"],
+        mono: ["SFMono-Regular", "Consolas", "Liberation Mono", "monospace"],
+      },
+      boxShadow: {
+        card: "0 18px 50px -30px rgba(16, 45, 58, 0.35)",
+        lift: "0 24px 60px -28px rgba(16, 45, 58, 0.42)",
+        glow: "0 0 0 5px rgba(11, 122, 117, 0.12)",
+        panel: "0 24px 80px -36px rgba(16, 45, 58, 0.45)",
+      },
+      backgroundImage: {
+        grid: "linear-gradient(rgba(16,45,58,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(16,45,58,.055) 1px, transparent 1px)",
+        "soft-radial": "radial-gradient(circle at top right, rgba(233,144,36,.18), transparent 38%), radial-gradient(circle at bottom left, rgba(11,122,117,.14), transparent 40%)",
+      },
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "draw-line": {
+          "0%": { strokeDashoffset: "260" },
+          "100%": { strokeDashoffset: "0" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: ".55" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up .55s ease-out both",
+        "draw-line": "draw-line 1.1s ease-out both",
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
